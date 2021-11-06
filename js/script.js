@@ -11,6 +11,29 @@ $.getJSON("js/data.json", function(json) {
 $("#result").click(function() {
   let attentionVal = $('select[name=attention]').val();
   let homeworkVal = $('select[name=homework]').val();
-  let text = $("#name").val() + ", " + attentionArray[attentionVal][randomInt(0,attentionArray[attentionVal].length)] + homeworkArray[homeworkVal][randomInt(0,homeworkArray[homeworkVal].length)];
+
+  let attentionArray;
+  if (attentionVal==0){
+    attentionArray = jsonData.attention.good;
+  }
+  else if(attentionVal==1){
+    attentionArray = jsonData.attention.normal;
+  }
+  else{
+    attentionArray = jsonData.attention.bad;
+  }
+
+  let homeworkArray;
+  if (homeworkVal==0){
+    homeworkArray = jsonData.hw.good;
+  }
+  else if(homeworkVal==1){
+    homeworkArray = jsonData.hw.normal;
+  }
+  else{
+    homeworkArray = jsonData.hw.bad;
+  }
+
+  let text = $("#name").val() + ", " + attentionArray[randomInt(0,attentionArray.length)] + homeworkArray[randomInt(0,homeworkArray.length)];
   $("#resultVal").val(text)
 });
