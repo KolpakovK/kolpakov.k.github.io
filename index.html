@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ОТЗЫВЫ</title>
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div>
+			<label for="name">Имя студента:</label>
+			<input type="text" name="name" id="name" placeholder="Имя студента">
+		</div>
+		<div>
+			<label for="attention">Внимательность:</label>
+			<select name="attention" id="attention">
+				<option value="0">Высокая</option>
+				<option value="1">Средняя</option>
+				<option value="2">Низкая</option>
+			</select>
+		</div>
+		<div>
+			<label for="homework">Домашняя работа:</label>
+			<select name="homework" id="homework">
+				<option value="0">Высокая</option>
+				<option value="1">Средняя</option>
+				<option value="2">Низкая</option>
+			</select>
+		</div>
+		<a href="#" id="result">Получить результат</a>
+		<textarea name="result" id="resultVal" cols="" rows=""></textarea>
+	</div>
+
+	<script src="js/data.json"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
