@@ -3,7 +3,7 @@ function randomInt(min, max) {
 }
 
 let jsonData;
-$.getJSON("test.json", function(json) {
+$.getJSON("data.json", function(json) {
     jsonData = json;
     console.log(json); // this will show the info it in firebug console
 });
